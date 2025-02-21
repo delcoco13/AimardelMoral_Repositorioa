@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #nabigazioa ul {
+                margin-top: 0;
+                padding: 15px;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                background-color: gray;
+            }
+
+            #nabigazioa ul a {
+                color: white;
+                padding: 25px;
+                text-decoration: none;
+            }
+
+            #tabla {
+                background-color: white;
+                width: 17%;
+                border-radius: 7px;
+            }
+
+            #atzean {
+                margin: 0;
+                padding: 0;
+            }
+
+            #aldatu {
+                margin: 0;
+                padding: 0;
+            }
+
+            button {
+                width: 27px;
+                height: 27px;
+                border-radius: 10px;
+            }
+
+            #arroxa {
+                background-color: pink;
+            }
+
+            #berde-argia {
+                background-color: lightgreen;
+            }
+
+            #urdin-argia {
+                background-color: lightblue;
+            }
+
+            #grisa {
+                background-color: grey;
+            }
+
+            #gris-argia{
+                background-color: lightgrey;
+            }
+
+            #gorria {
+                background-color: red;
+            }
+
+            #berdea {
+                background-color: green;
+            }
+
+            #urdina {
+                background-color: blue;
+            }
+
+            #beltza{
+                background-color: black;
+            }
+
+            #xuria{
+                background-color: white;
+            }
+
+            button:hover{
+                height: 35px;
+                border: 2px solid yellowgreen;
+                cursor: pointer;
+            }
+        </style>
+</head>
+<body id="body">
+    <nav id="nabigazioa">
+        <ul>
+            <li><a href="Pertsonalizatzailea.html">Pertsonalizatzailea</a></li>
+            <li><a href="Formularioa.html">Formularioa</a></li>
+            <li><a href="Irudiak.html">Irudiak</a></li>
+        </ul>
+    </nav>
+    <h1>Ongi etorria Pertsonalizatzailera</h1>
+    <p>Paragrafo honen estiloa alda dezakezu</p>
+    <p>Klik egin Pertsonalizatzeko</p>
+
+    <div id="tabla">
+        <h4 id="atzean">Atzeko_kolorea</h4>
+            <button type="button" id="arroxa" onclick="arroxa()"></button>
+            <button type="button" id="berde-argia" onclick=""></button>
+            <button type="button" id="urdin-argia" onclick=""></button>
+            <button type="button" id="grisa"></button>
+            <button type="button" id="gris-argia"></button>
+        <h4 id="aldatu">Aldatu_letrak</h4>
+            <button type="button" id="gorria"></button>
+            <button type="button" id="berdea"></button>
+            <button type="button" id="urdina"></button>
+            <button type="button" id="beltza"></button>
+            <button type="button" id="xuria"></button>
+<br>
+            <button type="button" >XS</button>
+            <button type="button" >S</button>
+            <button type="button" >M</button>
+            <button type="button" >L</button>
+            <button type="button" >XL</button>
+<br>
+            <button type="button">A</button>
+            <button type="button">T</button>
+            <button type="button">C</button>
+            <button type="button">F</button>
+            <button type="button">M</button>
+    </div>
+
+        <script>
+            function arroxa() {
+                    document.getElementById("body").style.backgroundColor= "pink";
+            }
+
+            /* function berde-argia() {
+                    document.getElementById("body").style.backgroundColor= "pink";
+            } */
+        </script>
+</body>
+</html>
