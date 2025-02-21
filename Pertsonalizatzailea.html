@@ -46,6 +46,7 @@
                 width: 27px;
                 height: 27px;
                 border-radius: 10px;
+                justify-content: center;
             }
 
             #arroxa {
@@ -103,45 +104,85 @@
             <li><a href="Irudiak.html">Irudiak</a></li>
         </ul>
     </nav>
+    <div id="testua">
     <h1>Ongi etorria Pertsonalizatzailera</h1>
     <p>Paragrafo honen estiloa alda dezakezu</p>
     <p>Klik egin Pertsonalizatzeko</p>
-
+    </div>
     <div id="tabla">
         <h4 id="atzean">Atzeko_kolorea</h4>
             <button type="button" id="arroxa" onclick="arroxa()"></button>
-            <button type="button" id="berde-argia" onclick=""></button>
-            <button type="button" id="urdin-argia" onclick=""></button>
-            <button type="button" id="grisa"></button>
-            <button type="button" id="gris-argia"></button>
+            <button type="button" id="berde-argia" onclick="BerdeArgia()"></button>
+            <button type="button" id="urdin-argia" onclick="UrdinArgia()"></button>
+            <button type="button" id="grisa" onclick="grisa()"></button>
+            <button type="button" id="gris-argia" onclick="GrisArgia()"></button>
         <h4 id="aldatu">Aldatu_letrak</h4>
-            <button type="button" id="gorria"></button>
-            <button type="button" id="berdea"></button>
-            <button type="button" id="urdina"></button>
-            <button type="button" id="beltza"></button>
-            <button type="button" id="xuria"></button>
+            <button type="button" id="gorria" onclick="gorria()"></button>
+            <button type="button" id="berdea" onclick="berdea()"></button>
+            <button type="button" id="urdina" onclick="urdina()"></button>
+            <button type="button" id="beltza" onclick="beltza()"></button>
+            <button type="button" id="xuria" onclick="xuria()"></button>
 <br>
-            <button type="button" >XS</button>
-            <button type="button" >S</button>
-            <button type="button" >M</button>
-            <button type="button" >L</button>
-            <button type="button" >XL</button>
+            <button type="button" onclick="xs()">XS</button>
+            <button type="button" onclick="s()">S</button>
+            <button type="button" onclick="m()">M</button>
+            <button type="button" onclick="l()">L</button>
+            <button type="button" onclick="xl()">XL</button>
 <br>
-            <button type="button">A</button>
-            <button type="button">T</button>
-            <button type="button">C</button>
-            <button type="button">F</button>
-            <button type="button">M</button>
+            <button type="button" onclick="a()">A</button>
+            <button type="button" onclick="t()">T</button>
+            <button type="button" onclick="c()">C</button>
+            <button type="button" onclick="f()">F</button>
+            <button type="button" onclick="m()">M</button>
     </div>
 
         <script>
+            /*Fondoaren kolorea aldatu*/
             function arroxa() {
                     document.getElementById("body").style.backgroundColor= "pink";
             }
 
-            /* function berde-argia() {
-                    document.getElementById("body").style.backgroundColor= "pink";
-            } */
+            function BerdeArgia() {
+                    document.getElementById("body").style.backgroundColor= "lightgreen";
+            }
+
+            function UrdinArgia() {
+                    document.getElementById("body").style.backgroundColor= "lightblue";
+            }
+
+            function grisa() {
+                    document.getElementById("body").style.backgroundColor= "grey";
+            }
+
+            function GrisArgia() {
+                    document.getElementById("body").style.backgroundColor= "lightgrey";
+            }
+
+            /*Letraren Kolorea aldatu*/
+            function gorria() {
+                    document.getElementById("testua").style.color= "red";
+            }
+
+            function berdea() {
+                    document.getElementById("testua").style.color= "green";
+            }
+
+            function urdina() {
+                    document.getElementById("testua").style.color= "blue";
+            }
+
+            function beltza() {
+                    document.getElementById("testua").style.color= "black";
+            }
+
+            function xuria() {
+                    document.getElementById("testua").style.color= "white";
+            }
+            /*Letraren tamaina aldatu*/
+
+
+            
+            /*Letra mota aldatu*/
         </script>
 </body>
 </html>
