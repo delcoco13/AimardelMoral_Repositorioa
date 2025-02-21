@@ -125,7 +125,7 @@
 <br>
             <button type="button" onclick="xs()">XS</button>
             <button type="button" onclick="s()">S</button>
-            <button type="button" onclick="m()">M</button>
+            <button type="button" onclick="mt()">M</button>
             <button type="button" onclick="l()">L</button>
             <button type="button" onclick="xl()">XL</button>
 <br>
@@ -133,56 +133,95 @@
             <button type="button" onclick="t()">T</button>
             <button type="button" onclick="c()">C</button>
             <button type="button" onclick="f()">F</button>
-            <button type="button" onclick="m()">M</button>
+            <button type="button" onclick="M()">M</button>
     </div>
 
         <script>
             /*Fondoaren kolorea aldatu*/
             function arroxa() {
-                    document.getElementById("body").style.backgroundColor= "pink";
+                    document.getElementById("body").style.backgroundColor = "pink";
             }
 
             function BerdeArgia() {
-                    document.getElementById("body").style.backgroundColor= "lightgreen";
+                    document.getElementById("body").style.backgroundColor = "lightgreen";
             }
 
             function UrdinArgia() {
-                    document.getElementById("body").style.backgroundColor= "lightblue";
+                    document.getElementById("body").style.backgroundColor = "lightblue";
             }
 
             function grisa() {
-                    document.getElementById("body").style.backgroundColor= "grey";
+                    document.getElementById("body").style.backgroundColor = "grey";
             }
 
             function GrisArgia() {
-                    document.getElementById("body").style.backgroundColor= "lightgrey";
+                    document.getElementById("body").style.backgroundColor = "lightgrey";
             }
 
             /*Letraren Kolorea aldatu*/
+
             function gorria() {
-                    document.getElementById("testua").style.color= "red";
+                    document.getElementById("testua").style.color = "red";
             }
 
             function berdea() {
-                    document.getElementById("testua").style.color= "green";
+                    document.getElementById("testua").style.color = "green";
             }
 
             function urdina() {
-                    document.getElementById("testua").style.color= "blue";
+                    document.getElementById("testua").style.color = "blue";
             }
 
             function beltza() {
-                    document.getElementById("testua").style.color= "black";
+                    document.getElementById("testua").style.color = "black";
             }
 
             function xuria() {
-                    document.getElementById("testua").style.color= "white";
+                    document.getElementById("testua").style.color = "white";
             }
+
             /*Letraren tamaina aldatu*/
 
+            function xs() {
+                document.getElementById("testua").style.fontSize = "x-small";
+            }
 
-            
+            function s() {
+                document.getElementById("testua").style.fontSize = "small";
+            }
+
+            function mt() {
+                document.getElementById("testua").style.fontSize = "medium";
+            }
+
+            function l() {
+                document.getElementById("testua").style.fontSize = "large";
+            }
+
+            function xl() {
+                document.getElementById("testua").style.fontSize = "x-large";
+            }
             /*Letra mota aldatu*/
+
+            function a() {
+                document.getElementById("testua").style.fontFamily = "arial";
+            }
+
+            function t() {
+                document.getElementById("testua").style.fontFamily = "times";
+            }
+
+            function c() {
+                document.getElementById("testua").style.fontFamily = "courier";
+            }
+
+            function f() {
+                document.getElementById("testua").style.fontFamily = "fantasy";
+            }
+
+            function M() {
+                document.getElementById("testua").style.fontFamily = "monospace";
+            }
         </script>
 </body>
 </html>
