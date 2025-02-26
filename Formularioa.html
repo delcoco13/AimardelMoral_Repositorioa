@@ -53,6 +53,7 @@
 
              #name:focus, #emaila:focus {
                 border: 2px solid orange;
+                box-shadow:rgba(230, 115, 51, 0.5);
                 outline: none;
              }
         </style>
@@ -75,11 +76,12 @@
     
             <div class="formularioa">
             <label for="emaila">Emaila:</label>
-                <input type="email" id="emaila" name="emaila" placeholder="Sartu zure emaila">
+                <input type="email" id="emaila" name="emaila" oninput="onartu()" placeholder="Sartu zure emaila">
             </div>
             <div class="formularioa">
                 <button type="submit" class="submit-btn">Onartu</button>
             </div>
+            <p id="mezua"></p>
             <div class="formularioa">
             <label>Generoa:</label>
             <div class="form-taldea">
@@ -112,11 +114,21 @@
 
         <script>
 
-            /* E-mailaren onarpena
-            function {
-                IF 
+             /*E-mailaren onarpena*/
+            function onartu(){
+                let ongi = document.getElementById("emaila").value;
+                
+                if (ongi.includes ("@")) {
+                    document.getElementById("mezua").innerHTML = ongi + " balidoa da :)";
+                    document.getElementById("mezua").style.color = "green";
+                }
+
+                else {
+                    document.getElementById("mezua").innerHTML = ongi + " ez da balidoa, saiatu berriro faborez :(";
+                    document.getElementById("mezua").style.color = "red";
+                }
             }
-            */
+            
         </script>
 </body>
 </html> 
