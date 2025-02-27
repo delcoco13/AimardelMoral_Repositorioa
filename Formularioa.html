@@ -27,9 +27,12 @@
             }
 
             .m_botoia {
-                color: white;
-                background-color: gray;
                 border: 0;
+                background-color: gray;
+                color: white;
+                font-size: 16px;
+                margin-left: 20px;
+                padding: 0;
                 cursor: pointer;
             }
 
@@ -136,19 +139,20 @@
                 }
             }
 
+            /*Orriaren koloreak aldatu*/
             function modua(){
                 if(document.getElementsByClassName("m_botoia")[0].textContent.includes("Modua")){
                     document.getElementsByClassName("m_botoia")[0].textContent = "Iluna";
                     document.body.style.backgroundColor = "black";
                     document.body.style.color = "white";
-                    document.getElementsByClassName("formulario-kontainerra")[0].style.backgroundColor = "gray";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.backgroundColor = "#444";
                     document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomLeftRadius = "5px";
                     document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomRightRadius = "5px";
                 } else if ((document.getElementsByClassName("m_botoia")[0].textContent.includes("Argia"))){
                     document.getElementsByClassName("m_botoia")[0].textContent = "Iluna";
                     document.body.style.backgroundColor = "black";
                     document.body.style.color = "white";
-                    document.getElementsByClassName("formulario-kontainerra")[0].style.backgroundColor = "gray";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.backgroundColor = "#444";
                     document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomLeftRadius = "5px";
                     document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomRightRadius = "5px";
                 }
@@ -161,7 +165,6 @@
                     document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomRightRadius = "5px";
                 }
             }
-            
         </script>
 </body>
 </html> 
