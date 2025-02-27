@@ -26,7 +26,14 @@
                 text-decoration: none;
             }
 
-            .form {
+            .m_botoia {
+                color: white;
+                background-color: gray;
+                border: 0;
+                cursor: pointer;
+            }
+
+            .formulario-kontainerra {
                 width: 80%;
                 margin: auto;
                 max-width: 400px;
@@ -36,7 +43,7 @@
                 border-radius: 8px;
             }
 
-            .formularioa {
+            .formulario-errenkada {
                 display: flex;
                 margin-bottom: 15px;
                 flex-direction: column;
@@ -53,7 +60,7 @@
 
              #name:focus, #emaila:focus {
                 border: 2px solid orange;
-                box-shadow:rgba(230, 115, 51, 0.5);
+                box-shadow: 0 0 5px 2px rgba(230, 115, 51, 0.5);
                 outline: none;
              }
         </style>
@@ -64,25 +71,25 @@
             <li><a href="Pertsonalizatzailea.html">Pertsonalizatzailea</a></li>
             <li><a href="Formularioa.html">Formularioa</a></li>
             <li><a href="Irudiak.html">Irudiak</a></li>
-            <li><a href="">Modua</a></li>
+            <li><button class="m_botoia" onclick="modua()">Modua</button></li>
         </ul>
     </nav>
-    <div class="form">
+    <div class="formulario-kontainerra">
         <form method="#">
-            <div class="formularioa">
+            <div class="formulario-errenkada">
             <label for="name">Izen osoa:</label>
                 <input type="text" id="name" name="name" placeholder="Sartu zure izen osoa">
             </div>
     
-            <div class="formularioa">
+            <div class="formulario-errenkada">
             <label for="emaila">Emaila:</label>
                 <input type="email" id="emaila" name="emaila" placeholder="Sartu zure emaila">
             </div>
-            <div class="formularioa">
-                <button type="submit" class="submit-btn" onclick="onartu()">Onartu</button>
+            <div class="formulario-errenkada">
+                <button type="button" class="submit-btn" onclick="onartu()">Onartu</button>
             </div>
             <p id="mezua"></p>
-            <div class="formularioa">
+            <div class="formulario-errenkada">
             <label>Generoa:</label>
             <div class="form-taldea">
                 <input type="radio" id="gizona" name="generoa" value="gizona">
@@ -93,7 +100,7 @@
                     <label for="bestea">Beste bat</label>
             </div>
             </div>  
-            <div class="formularioa">
+            <div class="formulario-errenkada">
             <label for="estatua">Estatua:</label>
             <select id="estatua" name="estatua">
                 <option value="aukeratu">Aukeratu zure herrialdea</option>
@@ -104,7 +111,7 @@
             </select>
             </div>
     
-            <div class="formularioa">
+            <div class="formulario-errenkada">
             <button type="submit" class="submit-btn">Bidali</button>
             </div>
         </form>
@@ -118,7 +125,7 @@
             function onartu(){
                 let ongi = document.getElementById("emaila").value;
                 
-                if (ongi.includes ("@")) {
+                if (ongi.includes("@" && ".com" || ".es")) {
                     document.getElementById("mezua").innerHTML = ongi + " balidoa da :)";
                     document.getElementById("mezua").style.color = "green";
                 }
@@ -126,6 +133,32 @@
                 else {
                     document.getElementById("mezua").innerHTML = ongi + " ez da balidoa, saiatu berriro faborez :(";
                     document.getElementById("mezua").style.color = "red";
+                }
+            }
+
+            function modua(){
+                if(document.getElementsByClassName("m_botoia")[0].textContent.includes("Modua")){
+                    document.getElementsByClassName("m_botoia")[0].textContent = "Iluna";
+                    document.body.style.backgroundColor = "black";
+                    document.body.style.color = "white";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.backgroundColor = "gray";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomLeftRadius = "5px";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomRightRadius = "5px";
+                } else if ((document.getElementsByClassName("m_botoia")[0].textContent.includes("Argia"))){
+                    document.getElementsByClassName("m_botoia")[0].textContent = "Iluna";
+                    document.body.style.backgroundColor = "black";
+                    document.body.style.color = "white";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.backgroundColor = "gray";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomLeftRadius = "5px";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomRightRadius = "5px";
+                }
+                else {
+                    document.getElementsByClassName("m_botoia")[0].textContent = "Argia";
+                    document.body.style,backgroundColor = "white";
+                    document.body.style.color = "black";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.backgroundColor = "white";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomLeftRadius = "5px";
+                    document.getElementsByClassName("formulario-kontainerra")[0].style.borderBottomRightRadius = "5px";
                 }
             }
             
