@@ -27,7 +27,16 @@
                 text-decoration: none;
             }
 
-            #paragrafoa1 {
+            .m_botoia {
+                border: 0;
+                background-color: gray;
+                color: white;
+                font-size: 16px;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+
+            .paragrafoa1 {
                 margin: auto;
                 margin-bottom: 20px;
                 background-color: white;
@@ -37,7 +46,7 @@
                 box-shadow: rgba(0,  0, 0,0.1) 0px 2px 4px;
             }
 
-            #paragrafoa1 h3 {
+            .paragrafoa1 h3 {
                 color: skyblue;
             }
 
@@ -45,7 +54,7 @@
                 width: 10%;
             }
 
-            #paragrafoa2 {
+            .paragrafoa2 {
                 
                 margin-top: 20px;
                 margin: auto;
@@ -56,7 +65,7 @@
                 box-shadow: rgba(0,  0, 0,0.1) 0px 2px 4px;
             }
 
-            #paragrafoa2 h3 {
+            .paragrafoa2 h3 {
                 color: skyblue;
             }
         </style>
@@ -67,23 +76,58 @@
             <li><a href="Pertsonalizatzailea.html">Pertsonalizatzailea</a></li>
             <li><a href="Formularioa.html">Formularioa</a></li>
             <li><a href="Irudiak.html">Irudiak</a></li>
-            <li><a href="">Modua</a></li>
+            <li><button type="button" class="m_botoia" onclick="modua()">Modua</button></li>
         </ul>
     </nav>
-    <div id="paragrafoa1">
+    <div class="paragrafoa1">
         <h3>Botoi Magikoa: Sortu eta aldatu irudiak</h3>
         <button id="aldatu" onclick="aldatu()">Aldatu irudia!</button><br><br>
-        <img src="irudiak/html_logo.png" alt="html logfoa">
+        <img src="irudiak/html_logo.png" alt="html logfoa" id="argazkia">
     </div>
 
-    <div id="paragrafoa2">
+    <div class="paragrafoa2">
         <h3>Automatikoki kargatzea</h3>
-        <img src="irudiak/html_logo.png" alt="html logfoa">
+        <img src="#">
     </div>
-
         <script>
-            function aldatu(){
-                
+           /*Argazkiak botoiarekin aldatu*/
+        
+           /*Argazkiak autimatikoki aldatu*/
+
+           /*Orriaren koloreak aldatu*/
+           function modua(){
+                if(document.getElementsByClassName("m_botoia")[0].textContent.includes("Modua")){
+                    document.getElementsByClassName("m_botoia")[0].textContent = "Iluna";
+                    document.body.style.backgroundColor = "black";
+                    document.body.style.color = "white";
+                    document.getElementsByClassName("paragrafoa1")[0].style.backgroundColor = "#444";
+                    document.getElementsByClassName("paragrafoa1")[0].style.borderBottomLeftRadius = "20px";
+                    document.getElementsByClassName("paragrafoa1")[0].style.borderBottomRightRadius = "20px";
+                    document.getElementsByClassName("paragrafoa2")[0].style.backgroundColor = "#444";
+                    document.getElementsByClassName("paragrafoa2")[0].style.borderBottomLeftRadius = "20px";
+                    document.getElementsByClassName("paragrafoa2")[0].style.borderBottomRightRadius = "20px";
+                } else if ((document.getElementsByClassName("m_botoia")[0].textContent.includes("Argia"))){
+                    document.getElementsByClassName("m_botoia")[0].textContent = "Iluna";
+                    document.body.style.backgroundColor = "black";
+                    document.body.style.color = "white";
+                    document.getElementsByClassName("paragrafoa1")[0].style.backgroundColor = "#444";
+                    document.getElementsByClassName("paragrafoa1")[0].style.borderBottomLeftRadius = "20px";
+                    document.getElementsByClassName("paragrafoa1")[0].style.borderBottomRightRadius = "20px";
+                    document.getElementsByClassName("paragrafoa2")[0].style.backgroundColor = "#444";
+                    document.getElementsByClassName("paragrafoa2")[0].style.borderBottomLeftRadius = "20px";
+                    document.getElementsByClassName("paragrafoa2")[0].style.borderBottomRightRadius = "20px";
+                }
+                else {
+                    document.getElementsByClassName("m_botoia")[0].textContent = "Argia";
+                    document.body.style,backgroundColor = "white";
+                    document.body.style.color = "black";
+                    document.getElementsByClassName("paragrafoa1")[0].style.backgroundColor = "#white";
+                    document.getElementsByClassName("paragrafoa1")[0].style.borderBottomLeftRadius = "20px";
+                    document.getElementsByClassName("paragrafoa1")[0].style.borderBottomRightRadius = "20px";
+                    document.getElementsByClassName("paragrafoa2")[0].style.backgroundColor = "#white";
+                    document.getElementsByClassName("paragrafoa2")[0].style.borderBottomLeftRadius = "20px";
+                    document.getElementsByClassName("paragrafoa2")[0].style.borderBottomRightRadius = "20px";
+                }
             }
         </script>
 </body>
