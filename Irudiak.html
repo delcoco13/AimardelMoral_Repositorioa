@@ -82,21 +82,21 @@
     <div class="paragrafoa1">
         <h3>Botoi Magikoa: Sortu eta aldatu irudiak</h3>
         <button id="aldatu" onclick="aldatu()">Aldatu irudia!</button><br><br>
-        <img src="irudiak/html_logo.png" id="argazkiak"></div>
+        <img id="argazkiak"></p>
     </div>
-
     <div class="paragrafoa2">
         <h3>Automatikoki kargatzea</h3>
-        <p id="automatiko" onload="auto()"></p>
+        <img  id="automatiko"></p>
     </div>
         <script>
            /*Argazkiak botoiarekin aldatu*/
            const irudiak = ["irudiak/html_logo.png", "irudiak/css_logo.png", "irudiak/js_logo.png", "irudiak/pikachu.png", "irudiak/bob.png"]
 
             let hasiera = 0; 
-           function aldatu() {
+            function aldatu() {
             hasiera = (hasiera + 1) % 5;
             document.getElementById("argazkiak").src = irudiak[hasiera];
+
 
             }
            /*Argazkiak autimatikoki aldatu*/
@@ -105,7 +105,7 @@
                 document.getElementById("automatiko").src = irudiak[hasiera];
                 
             }
-            setInterval(auto, 1000);
+            setInterval(auto,200);
            /*Orriaren koloreak aldatu*/
            function modua(){
                 if(document.getElementsByClassName("m_botoia")[0].textContent.includes("Modua")){
