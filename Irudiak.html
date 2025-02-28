@@ -87,7 +87,7 @@
 
     <div class="paragrafoa2">
         <h3>Automatikoki kargatzea</h3>
-        <div id="automatiko" onload="auto()"></div>
+        <p id="automatiko" onload="auto()"></p>
     </div>
         <script>
            /*Argazkiak botoiarekin aldatu*/
@@ -102,10 +102,10 @@
            /*Argazkiak autimatikoki aldatu*/
            function auto(){
                 hasiera = (hasiera + 1) % 5;
-                document.getElementById("argazkiak").src = irudiak[hasiera];
+                document.getElementById("automatiko").src = irudiak[hasiera];
                 
             }
-            setInterval[auto, 1000];
+            setInterval(auto, 1000);
            /*Orriaren koloreak aldatu*/
            function modua(){
                 if(document.getElementsByClassName("m_botoia")[0].textContent.includes("Modua")){
