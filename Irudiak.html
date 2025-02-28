@@ -9,7 +9,7 @@
                 margin: 0;
                 padding: 0;
                 font-family: Arial, Helvetica, sans-serif;
-                background-color: aliceblue;
+                background-color: #fff;
             }
 
             #nabigazioa ul {
@@ -43,7 +43,7 @@
                 width: 750px;
                 padding: 30px;
                 border-radius: 20px;
-                box-shadow: rgba(0,  0, 0,0.1) 0px 2px 4px;
+                box-shadow: gray 0px 2px 3px;
             }
 
             .paragrafoa1 h3 {
@@ -62,7 +62,7 @@
                 width: 750px;
                 padding: 30px;
                 border-radius: 20px;
-                box-shadow: rgba(0,  0, 0,0.1) 0px 2px 4px;
+                box-shadow: gray 0px 2px 3px;
             }
 
             .paragrafoa2 h3 {
@@ -82,18 +82,30 @@
     <div class="paragrafoa1">
         <h3>Botoi Magikoa: Sortu eta aldatu irudiak</h3>
         <button id="aldatu" onclick="aldatu()">Aldatu irudia!</button><br><br>
-        <img src="irudiak/html_logo.png" alt="html logfoa" id="argazkia">
+        <img src="irudiak/html_logo.png" id="argazkiak"></div>
     </div>
 
     <div class="paragrafoa2">
         <h3>Automatikoki kargatzea</h3>
-        <img src="#">
+        <div id="automatiko" onload="auto()"></div>
     </div>
         <script>
            /*Argazkiak botoiarekin aldatu*/
-        
-           /*Argazkiak autimatikoki aldatu*/
+           const irudiak = ["irudiak/html_logo.png", "irudiak/css_logo.png", "irudiak/js_logo.png", "irudiak/pikachu.png", "irudiak/bob.png"]
 
+            let hasiera = 0; 
+           function aldatu() {
+            hasiera = (hasiera + 1) % 5;
+            document.getElementById("argazkiak").src = irudiak[hasiera];
+
+            }
+           /*Argazkiak autimatikoki aldatu*/
+           function auto(){
+                hasiera = (hasiera + 1) % 5;
+                document.getElementById("argazkiak").src = irudiak[hasiera];
+                
+            }
+            setInterval[auto, 1000];
            /*Orriaren koloreak aldatu*/
            function modua(){
                 if(document.getElementsByClassName("m_botoia")[0].textContent.includes("Modua")){
@@ -119,12 +131,12 @@
                 }
                 else {
                     document.getElementsByClassName("m_botoia")[0].textContent = "Argia";
-                    document.body.style,backgroundColor = "white";
+                    document.body.style.backgroundColor = "white";
                     document.body.style.color = "black";
-                    document.getElementsByClassName("paragrafoa1")[0].style.backgroundColor = "#white";
+                    document.getElementsByClassName("paragrafoa1")[0].style.backgroundColor = "white";
                     document.getElementsByClassName("paragrafoa1")[0].style.borderBottomLeftRadius = "20px";
                     document.getElementsByClassName("paragrafoa1")[0].style.borderBottomRightRadius = "20px";
-                    document.getElementsByClassName("paragrafoa2")[0].style.backgroundColor = "#white";
+                    document.getElementsByClassName("paragrafoa2")[0].style.backgroundColor = "white";
                     document.getElementsByClassName("paragrafoa2")[0].style.borderBottomLeftRadius = "20px";
                     document.getElementsByClassName("paragrafoa2")[0].style.borderBottomRightRadius = "20px";
                 }
